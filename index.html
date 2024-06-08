@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+    " rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="interface py-3 position-relative">
+    <div class="container d-flex flex-column justify-content-center align-items-center py-5">
+        <div class="bc"><h1 class="py-2">Bookmarker</h1></div>
+        <div class="Bookmark-body mt-5 py-4 px-3 d-flex flex-column justify-content-center align-items-center w-100 gap-4">
+            <h2>
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites    
+                <i class="fa-solid fa-bookmark"></i>
+            </h2>
+            <div class="finput w-100 d-flex flex-column  justify-content-center">
+                <label for="bookmarkName" class="pb-2 fw-bold">
+                    <i class="fa-solid fa-book pe-2"></i>
+                    Site Name
+                </label>
+                <input oninput="validation(this)"  type="email" class="form-control" id="bookmarkName" placeholder="Bookmark Name">
+                <div class="alert alert-danger my-2 p-1 d-none">
+                    <p>Name Must Start with..... </p>
+                </div>
+            </div>
+            <div class="finput w-100 d-flex flex-column  justify-content-center">
+                <label for="bookmarkURL" class="pb-2 fw-bold">
+                    <i class="fa-solid fa-link pe-2"></i>
+                    Site URL
+                </label>
+                <input oninput="validation(this)"  type="email" class="form-control" id="bookmarkURL" placeholder="Website URL">
+                <div class="alert alert-danger my-2 p-1 d-none">
+                    <p>URL Must Start with..... </p>
+                </div>
+            </div>
+            <button onclick="addProduct();" id="btn1"  class="btn btn-outline-danger px-5 w-100">Submit</button>
+            <button onclick="updateproduct();" id="btn2" class="btn btn-outline-success px-5 d-none w-100">Update</button>
+        </div>
+
+        <input oninput="searchProduct();" type="text" class="form-control shadow-none mt-4 d-none" id="productSearch"
+            placeholder="Search Name">
+        <table class="table text-center mt-4">
+            <thead>
+                <tr>
+                    <th class="text-capitalize fw-bold">index</th>
+                    <th class="text-capitalize fw-bold">Website Name</th>
+                    <th class="text-capitalize fw-bold">Visit</th>
+                    <th class="text-capitalize fw-bold">Delete</th>
+                    <th class="text-capitalize fw-bold">Update</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent">
+                
+            </tbody>
+        </table>
+    </div>
+    <div id="alert" class="box-info position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center d-none bg-black bg-opacity-50">
+        <div class="box-conent bg-white p-4 rounded-2 shadow-lg">
+            <header class="box-header w-100 d-flex justify-content-between align-items-center mb-4">
+                <div class="circles d-flex">
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                    <span class="rounded-circle me-2"></span>
+                </div>
+                <button class="btn border-0" id="closeBtn">
+                    <a href="" >
+                        <i class="fa-solid fa-xmark close fs-3"></i>
+                    </a>
+                </button>
+            </header>
+            <p class="m-0 pb-2">
+                Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <ul class="rules list-unstyled m-0">
+                <li class="d-flex align-items-center">
+                    <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                    Site name must contain at least 3 characters
+                </li>
+                <li class="d-flex align-items-center">
+                    <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                    Site URL must be a valid one
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+
+
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+    "></script>
+    <script src="js/index1.js"></script>
+
+</body>
+</html>

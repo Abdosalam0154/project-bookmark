@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+body {
+    background-color: #f7ecde;
+}
+
+::selection {
+    background-color: #fec260;
+}
+
+.container h1 {
+    position: relative;
+    font-family: "Pacifico", cursive;
+    font-weight: 500;
+    font-size: 50px;
+}
+
+.container h1::before {
+    content: "";
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    bottom: 10px;
+    background-color: #fec260;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.container h1:hover::before {
+    height: 60%;
+}
+
+.Bookmark-body {
+    border-color: #352e28;
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+}
+
+.Bookmark-body h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.finput,
+.btn,
+table {
+    font-family: "PT Sans Caption", sans-serif;
+}
+
+.circles span:nth-child(1) {
+    background-color: #f15f5d;
+    width: 20px;
+    height: 20px;
+}
+
+.circles span:nth-child(2) {
+    background-color: #febe2e;
+    width: 20px;
+    height: 20px;
+}
+.circles span:nth-child(3) {
+    background-color: #4db748;
+    width: 20px;
+    height: 20px;
+}
+.rules i {
+    font-size: 20px;
+}
+#alert p{
+    font-family: "Bree Serif", serif;
+    font-size: 20px;
+}
+ul li{
+    font-family: "PT Sans Caption", sans-serif;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
