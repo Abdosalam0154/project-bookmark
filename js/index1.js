@@ -86,7 +86,10 @@ function updateproduct() {
     Button2.classList.add("d-none")
     Button1.classList.remove("d-none")
     display();
+    clearInput();
     localStorage.setItem("products", JSON.stringify(bookMarkContainer));
+    bookmarkNameInput.classList.remove("is-valid")
+    bookmarkURLInput.classList.remove("is-valid")
     }
     else{
         alertInput.classList.remove("d-none")
